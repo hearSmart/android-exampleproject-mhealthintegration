@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hearxgroup.mhealthintegrationdemo.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.hearxgroup.mhealthintegrationdemo.MainActivity">
+
+        <EditText
+            android:id="@+id/edt_test_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="TEST ID"/>
+
+        <Button
+            android:id="@+id/btn_generate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edt_test_id"
+            android:layout_alignBottom="@+id/edt_test_id"
+            android:text="Generate ID"/>
+
+        <EditText
+            android:id="@+id/edt_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_test_id"
+            android:ems="8"
+            android:text="male"
+            android:hint="GENDER"/>
+
+        <EditText
+            android:id="@+id/edt_birthdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_gender"
+            android:text="1991-01-24"
+            android:ems="8"
+            android:hint="BIRTHDATE"/>
+
+        <EditText
+            android:id="@+id/edt_firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_birthdate"
+            android:text="TestFirstName"
+            android:ems="8"
+            android:hint="FIRST NAME"/>
+
+        <EditText
+            android:id="@+id/edt_lastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_firstname"
+            android:text="TestLastName"
+            android:ems="8"
+            android:hint="LAST NAME"/>
+
+        <EditText
+            android:id="@+id/edt_languageiso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_lastname"
+            android:text="eng"
+            android:ems="8"
+            android:hint="LANGUAGE ISO3"/>
+
+        <EditText
+            android:id="@+id/edt_id_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_languageiso"
+            android:ems="8"
+            android:hint="ID NUMBER"/>
+
+        <EditText
+            android:id="@+id/edt_mrn_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_id_number"
+            android:ems="8"
+            android:hint="MRN"/>
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_mrn_number"
+            android:ems="8"
+            android:hint="EMAIL"/>
+
+        <EditText
+            android:id="@+id/edt_contactno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_email"
+            android:ems="8"
+            android:hint="CONTACT NUMBER"/>
+
+        <Button
+            android:id="@+id/btn_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/edt_contactno"
+            android:text="GO!"/>
+    </RelativeLayout>
+</ScrollView>
