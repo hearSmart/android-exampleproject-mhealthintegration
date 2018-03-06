@@ -18,6 +18,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 
+import com.google.gson.Gson;
+import com.hearxgroup.mhealthintegrationdemo.Models.FrequencyResult;
 import com.hearxgroup.mhealthintegrationdemo.Models.HearscreenTest;
 
 public class MHealthTestRetriever implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -57,8 +59,12 @@ public class MHealthTestRetriever implements LoaderManager.LoaderCallbacks<Curso
         if (data != null && data.getCount() > 0) {
             data.moveToFirst();
             String hsTestJson = data.getString(1);
-            if(hsTestJson!=null && hsTestJson.length()>0)
+            if(hsTestJson!=null && hsTestJson.length()>0) {
+                HearscreenTest test = HearscreenTest.fromJson(hsTestJson);
+                test.setFrequencyResults(new Gson().fromJson(test.getFrequencyResultsJson(), FrequencyResult[].class));
+                test.setFrequencyResultsJson(null);
                 listener.onHearscreenRetrieve(HearscreenTest.fromJson(hsTestJson));
+            }
         }
     }
 

@@ -121,7 +121,6 @@ public class MainActivity extends AppCompatActivity
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                test.setFrequencyResults(new Gson().fromJson(test.getFrequencyResultsJson(), FrequencyResult[].class));
                 presenter.actionReceivedHSTest(MainActivity.this, test);
                 Log.d(TAG, "HS TEST ENTRY: "+test.toJson());
             }
