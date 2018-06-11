@@ -8,9 +8,6 @@
 /captures
 .externalNativeBuild
 .idea/
-app/release/
-dig/
 gradle/
 gradlew
 gradlew.bat
-mhealthkey/
