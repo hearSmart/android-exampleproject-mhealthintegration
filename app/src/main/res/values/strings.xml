@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MHealthIntegrationDemo</string>
+
+    <string-array name="array_integration_types">
+        <item>MHealthStudio</item>
+        <item>HearTest</item>
+    </string-array>
 </resources>

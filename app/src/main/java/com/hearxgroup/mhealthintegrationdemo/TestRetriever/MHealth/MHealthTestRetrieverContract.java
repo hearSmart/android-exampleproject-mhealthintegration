@@ -8,9 +8,9 @@
  * /
  */
 
-package com.hearxgroup.mhealthintegrationdemo.TestRetriever;
+package com.hearxgroup.mhealthintegrationdemo.TestRetriever.MHealth;
 
-import com.hearxgroup.mhealthintegrationdemo.Models.HearscreenTest;
+import com.hearxgroup.mhealthintegrationdemo.Models.MHealth.HearscreenTest;
 
 public class MHealthTestRetrieverContract {
 

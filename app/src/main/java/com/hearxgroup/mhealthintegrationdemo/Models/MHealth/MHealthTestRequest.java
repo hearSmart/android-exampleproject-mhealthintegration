@@ -8,14 +8,14 @@
  * /
  */
 
-package com.hearxgroup.mhealthintegrationdemo.Models;
+package com.hearxgroup.mhealthintegrationdemo.Models.MHealth;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.google.gson.Gson;
 
-public class TestRequest {
+public class MHealthTestRequest {
     /*private int testType; //hearScreen/hearTest/hearDin/hearScope/Peek Acuity. *NB REQUIRED
     @NonNull*/
     private String generatedId; //24 character length randomly generated string *NB REQUIRED
@@ -40,7 +40,7 @@ public class TestRequest {
     @Nullable
     private String returnIntentActionName; //Return intent filter action name
 
-    public static TestRequest build(
+    public static MHealthTestRequest build(
             String generatedId,
             String gender,
             String birthdate,
@@ -52,20 +52,20 @@ public class TestRequest {
             String email,
             String contactNumber,
             String returnIntentActionName) {
-        TestRequest testRequest = new TestRequest();
-        testRequest.setGeneratedId(generatedId);
-        testRequest.setGender(gender);
-        testRequest.setBirthDate(birthdate);
-        testRequest.setFirstName(firstName);
-        testRequest.setLastName(lastName);
-        testRequest.setLanguageIso3(languageIso3);
-        testRequest.setIdNumber(idNumber);
-        testRequest.setMrn(mrn);
-        testRequest.setEmail(email);
-        testRequest.setContactNumber(contactNumber);
-        testRequest.setReturnIntentActionName(returnIntentActionName);
+        MHealthTestRequest mHealthTestRequest = new MHealthTestRequest();
+        mHealthTestRequest.setGeneratedId(generatedId);
+        mHealthTestRequest.setGender(gender);
+        mHealthTestRequest.setBirthDate(birthdate);
+        mHealthTestRequest.setFirstName(firstName);
+        mHealthTestRequest.setLastName(lastName);
+        mHealthTestRequest.setLanguageIso3(languageIso3);
+        mHealthTestRequest.setIdNumber(idNumber);
+        mHealthTestRequest.setMrn(mrn);
+        mHealthTestRequest.setEmail(email);
+        mHealthTestRequest.setContactNumber(contactNumber);
+        mHealthTestRequest.setReturnIntentActionName(returnIntentActionName);
 
-        return testRequest;
+        return mHealthTestRequest;
     }
 
     public String getGender() {
@@ -156,8 +156,8 @@ public class TestRequest {
         this.returnIntentActionName = returnIntentActionName;
     }
 
-    public static TestRequest fromJson(String json) {
-        return new Gson().fromJson(json, TestRequest.class);
+    public static MHealthTestRequest fromJson(String json) {
+        return new Gson().fromJson(json, MHealthTestRequest.class);
     }
 
     public String toJson() {

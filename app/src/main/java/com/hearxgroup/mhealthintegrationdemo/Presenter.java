@@ -9,8 +9,10 @@ import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 
 import com.google.gson.Gson;
-import com.hearxgroup.mhealthintegrationdemo.Models.HearscreenTest;
-import com.hearxgroup.mhealthintegrationdemo.Models.TestRequest;
+import com.hearxgroup.mhealthintegrationdemo.Models.HearTest.HearTestTest;
+import com.hearxgroup.mhealthintegrationdemo.Models.HearTest.HearTestTestRequest;
+import com.hearxgroup.mhealthintegrationdemo.Models.MHealth.HearscreenTest;
+import com.hearxgroup.mhealthintegrationdemo.Models.MHealth.MHealthTestRequest;
 
 import java.util.List;
 
@@ -28,14 +30,24 @@ public class Presenter {
        this.uiInterface = uiInterface;
     }
 
-    protected void uiEventBtnClkGo(TestRequest testRequest) {
+    protected void uiEventBtnClkGo(MHealthTestRequest testRequest) {
         Bundle bundle = new Bundle();
-        bundle.putString(Constants.BUNDLE_EXTRA_TEST_REQUEST_JSON, testRequest.toJson());
+        bundle.putString(Constants.BUNDLE_EXTRA_MHTEST_REQUEST_JSON, testRequest.toJson());
         openApp(bundle, Constants.REQUEST_HEARING_TEST_ACTION_NAME);
+    }
+
+    protected void uiEventBtnClkGo(HearTestTestRequest testRequest) {
+        Bundle bundle = new Bundle();
+        bundle.putString(Constants.BUNDLE_EXTRA_HEARTEST_TEST_REQUEST_JSON, testRequest.toJson());
+        openApp(bundle, Constants.REQUEST_HEARTEST_TEST_ACTION_NAME);
     }
 
     protected void actionReceivedHSTest(Context activityContext, HearscreenTest test) {
         showDialog(activityContext, "HS TEST RECEIVED!", new Gson().toJson(test));
+    }
+
+    protected void actionReceivedHTTest(Context activityContext, HearTestTest test) {
+        showDialog(activityContext, "HearTest Test Received!", new Gson().toJson(test));
     }
 
     private boolean openApp(Bundle bundle, String actionName) {

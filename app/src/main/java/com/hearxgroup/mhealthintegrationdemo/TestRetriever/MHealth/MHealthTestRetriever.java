@@ -8,7 +8,7 @@
  * /
  */
 
-package com.hearxgroup.mhealthintegrationdemo.TestRetriever;
+package com.hearxgroup.mhealthintegrationdemo.TestRetriever.MHealth;
 
 import android.app.LoaderManager;
 import android.content.Context;
@@ -19,8 +19,8 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.gson.Gson;
-import com.hearxgroup.mhealthintegrationdemo.Models.FrequencyResult;
-import com.hearxgroup.mhealthintegrationdemo.Models.HearscreenTest;
+import com.hearxgroup.mhealthintegrationdemo.Models.MHealth.FrequencyResult;
+import com.hearxgroup.mhealthintegrationdemo.Models.MHealth.HearscreenTest;
 
 public class MHealthTestRetriever implements LoaderManager.LoaderCallbacks<Cursor> {
 
